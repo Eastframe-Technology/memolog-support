@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MemoLog support</title>
+<meta name="description" content="Support and privacy policy for MemoLog, the voice recorder with on-device transcription.">
+<style>
+  :root { color-scheme: light dark; --bg:#f6f5f4; --fg:#121318; --muted:#5e6068; --accent:#c4442f; --card:#ffffff; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0e0f13; --fg:#efeeec; --muted:#a2a3ab; --accent:#ff7a6b; --card:#181a20; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:48px 16px 64px; }
+  h1 { font-size:34px; margin:0 0 4px; } h2 { margin-top:40px; font-size:22px; }
+  p.lead { color:var(--muted); margin-top:0; }
+  .card { background:var(--card); border-radius:14px; padding:16px 20px; margin:16px 0; }
+  a { color:var(--accent); }
+  .logo { width:72px; height:72px; border-radius:18px; display:block; margin-bottom:16px; }
+  footer { color:var(--muted); font-size:14px; margin-top:48px; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="icon.png" alt="">
+  <h1>MemoLog</h1>
+  <p class="lead">Voice recorder with transcription on your phone, in 99 languages. Free, with one optional unlock. No ads, no subscription, no account.</p>
+
+  <h2 id="support">Support</h2>
+  <div class="card">
+    <p>Questions, bugs, or feature requests: email <a href="mailto:contact@eastframe-technology.com">contact@eastframe-technology.com</a>. A human reads every message, usually the same day.</p>
+    <p>A <a href="memolog-ios-demo.mp4">short captioned walkthrough</a> shows every feature.</p>
+  </div>
+
+  <h2>Frequently asked</h2>
+  <div class="card">
+    <p><strong>Is my audio sent anywhere to be transcribed?</strong> No. MemoLog transcribes with a speech model that is built into the app and runs on your phone. It works in airplane mode, and nothing leaves your device unless you share it.</p>
+    <p><strong>Which languages are supported?</strong> 99 languages. MemoLog detects the language by itself, or you can pick one in Settings for better results on short or mixed recordings.</p>
+    <p><strong>How accurate is it?</strong> Clear speech close to the phone transcribes very well; noisy rooms, distant voices and heavy accents make more mistakes. Tap any sentence to hear the audio behind it.</p>
+    <p><strong>What if the app is closed or the battery dies while recording?</strong> MemoLog writes the audio as it records. The next time you open it, an interrupted recording is repaired and listed, up to the last second that was saved.</p>
+    <p><strong>What does the free version include?</strong> Unlimited recording and playback, sharing audio, and the first 5 minutes of every transcript. MemoLog Pro, a single purchase, transcribes recordings of any length, imports audio files (for example from Voice Memos) to transcribe them, exports transcripts as text or subtitles (SRT), and shares audio as compact M4A.</p>
+    <p><strong>Is there a subscription?</strong> No. MemoLog Pro is a single purchase. Restore it on a new phone from Settings.</p>
+    <p><strong>How do I move my recordings to a computer?</strong> Share them from the recording screen, or on iPhone open the Files app (On My iPhone, MemoLog).</p>
+  </div>
+
+  <h2 id="privacy">Privacy policy</h2>
+  <div class="card">
+    <p><em>Effective 2 November 2026.</em> MemoLog is published by Eastframe Technology LLC.</p>
+    <p><strong>What we collect: nothing.</strong> MemoLog has no account system, no analytics, no advertising, and no crash reporting service. It never connects to the internet and sends no data to us or anyone else.</p>
+    <p><strong>Microphone.</strong> MemoLog uses the microphone only while you record. Recordings are saved on your device.</p>
+    <p><strong>Recordings and transcripts</strong> stay on your device until you delete them or uninstall the app. Transcription runs on your device with a built-in speech model. If you share or export a recording or a transcript, it goes to the app or service you choose in the share sheet.</p>
+    <p><strong>Purchases</strong> are handled by the App Store or Google Play. We do not see your payment details.</p>
+    <p><strong>Third parties.</strong> The app contains no third-party advertising or analytics code. The only external page it opens is this one, and only when you tap it.</p>
+    <p><strong>Children.</strong> MemoLog is not directed at children and collects no personal information from anyone.</p>
+    <p><strong>Changes.</strong> A new version of this policy will be published at this address with a new effective date.</p>
+  </div>
+
+  <h2>Credits</h2>
+  <div class="card">
+    <p>Speech recognition by <a href="https://github.com/ggml-org/whisper.cpp">whisper.cpp</a> (MIT licence) with OpenAI's Whisper base model (MIT licence). Store pictures use public-domain recordings from LibriVox and a public-domain 1962 speech by John F. Kennedy.</p>
+  </div>
+
+  <footer>© 2026 Eastframe Technology LLC</footer>
+</main>
+</body>
+</html>
