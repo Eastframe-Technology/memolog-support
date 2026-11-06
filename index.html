@@ -3,42 +3,111 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MemoLog support</title>
-<meta name="description" content="Support and privacy policy for MemoLog, the voice recorder with on-device transcription.">
-<style>
-  :root { color-scheme: light dark; --bg:#f6f5f4; --fg:#121318; --muted:#5e6068; --accent:#c4442f; --card:#ffffff; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#0e0f13; --fg:#efeeec; --muted:#a2a3ab; --accent:#ff7a6b; --card:#181a20; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:680px; margin:0 auto; padding:48px 16px 64px; }
-  h1 { font-size:34px; margin:0 0 4px; } h2 { margin-top:40px; font-size:22px; }
-  p.lead { color:var(--muted); margin-top:0; }
-  .card { background:var(--card); border-radius:14px; padding:16px 20px; margin:16px 0; }
-  a { color:var(--accent); }
-  .logo { width:72px; height:72px; border-radius:18px; display:block; margin-bottom:16px; }
-  footer { color:var(--muted); font-size:14px; margin-top:48px; }
-</style>
+<title>MemoLog: voice recorder with offline transcription for Android</title>
+<meta name="description" content="Record lectures, meetings and notes on Android and turn them into text on your phone. Offline speech to text in 99 languages. No upload, no account, no subscription.">
+<link rel="canonical" href="https://eastframe-technology.github.io/memolog-support/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MemoLog: voice recorder with offline transcription">
+<meta property="og:description" content="Record lectures, meetings and notes on Android and turn them into text on your phone. Offline speech to text in 99 languages. No upload, no account, no subscription.">
+<meta property="og:image" content="https://eastframe-technology.github.io/memolog-support/img/og.jpg">
+<meta property="og:url" content="https://eastframe-technology.github.io/memolog-support/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"MemoLog: Recorder & Transcribe","operatingSystem":"Android","applicationCategory":"ProductivityApplication","description":"Voice recorder with offline transcription on the phone, in 99 languages. No account, no upload, no subscription.","downloadUrl":"https://play.google.com/store/apps/details?id=com.eastframe.memolog","installUrl":"https://play.google.com/store/apps/details?id=com.eastframe.memolog","image":"https://eastframe-technology.github.io/memolog-support/img/og.jpg","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Eastframe Technology LLC"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is my audio sent anywhere to be transcribed?","acceptedAnswer":{"@type":"Answer","text":"No. MemoLog transcribes with a speech model that is built into the app and runs on your phone. It works in airplane mode, and nothing leaves your device unless you share it."}},{"@type":"Question","name":"Do I have to download a language model?","acceptedAnswer":{"@type":"Answer","text":"No. The model comes inside the app and covers every language. There is nothing more to download after you install from Google Play."}},{"@type":"Question","name":"Which languages are supported?","acceptedAnswer":{"@type":"Answer","text":"The model recognises 99 languages. MemoLog can detect the language by itself, in any of them. For better results on short or mixed recordings you can set it by hand in Settings, which offers 28 of the most common ones."}},{"@type":"Question","name":"How accurate is it?","acceptedAnswer":{"@type":"Answer","text":"Clear speech close to the phone transcribes well. Noisy rooms, distant voices, heavy accents, names and technical terms make more mistakes. It is not word-perfect, so tap any sentence to hear the audio behind it before you rely on it."}},{"@type":"Question","name":"Does it tell speakers apart?","acceptedAnswer":{"@type":"Answer","text":"No. You get one run of text with timestamps, not a labelled conversation."}},{"@type":"Question","name":"How long does transcription take?","acceptedAnswer":{"@type":"Answer","text":"It depends on your phone and the length of the recording, because your phone does all the work. A progress figure shows how far along it is. Long recordings are safest with the app open and the phone on a charger."}},{"@type":"Question","name":"What if the app is closed or the battery dies while recording?","acceptedAnswer":{"@type":"Answer","text":"MemoLog writes the audio as it records. The next time you open it, an interrupted recording is repaired and listed, up to the last second that was saved."}},{"@type":"Question","name":"What does the free version include?","acceptedAnswer":{"@type":"Answer","text":"Unlimited recording and playback, sharing audio as WAV, and the first 5 minutes of every transcript. MemoLog Pro, a single purchase, transcribes recordings of any length, imports audio files to transcribe them, exports transcripts as text or subtitles (SRT), and shares audio as compact M4A."}},{"@type":"Question","name":"Is there a subscription?","acceptedAnswer":{"@type":"Answer","text":"No. MemoLog Pro is a single purchase. Restore it on a new phone from Settings."}},{"@type":"Question","name":"How do I move my recordings to a computer?","acceptedAnswer":{"@type":"Answer","text":"Share them from the recording screen. Android lets you send the file to any app you have, such as email or a drive app."}}]}
+</script>
 </head>
 <body>
 <main>
-  <img class="logo" src="icon.png" alt="">
-  <h1>MemoLog</h1>
-  <p class="lead">Voice recorder with transcription on your phone, in 99 languages. Free, with one optional unlock. No ads, no subscription, no account.</p>
+  <nav><a class="home" href="./"><img src="icon.png" alt="" width="24" height="24">MemoLog</a><a href="guides/transcribe-audio-offline-android.html">Offline</a><a href="guides/record-lectures-meetings.html">Lectures</a><a href="guides/recording-consent.html">Consent</a><a href="index.html#support">Support</a></nav>
+
+  <h1>A voice recorder that writes the transcript on your phone</h1>
+  <p class="lead">Record a lecture, a meeting or a thought on a walk. MemoLog turns it into text with a speech model that runs on the phone itself, so your audio is never uploaded and you do not need a connection.</p>
+  <a class="cta" href="https://play.google.com/store/apps/details?id=com.eastframe.memolog"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.8v18.4c0 .6.6.9 1.1.6l15.4-9.2c.5-.3.5-.9 0-1.2L5.1 2.2C4.6 1.9 4 2.2 4 2.8z"/></svg>Get it on Google Play</a>
+  <p class="note">Android. Free: unlimited recording and playback, sharing audio, and the first 5 minutes of every transcript. MemoLog Pro, one in-app purchase paid once: transcripts of any length, audio file import, text and subtitle export, M4A.</p>
+
+  <div class="shots" aria-label="Screenshots from the Android app">
+    <img src="img/shot-1.webp" width="400" height="800" alt="Library of recordings with a search field and the start of each transcript">
+    <img src="img/shot-2.webp" width="400" height="800" alt="Transcript of a speech with a timestamp beside every sentence and the current sentence highlighted" loading="lazy">
+    <img src="img/shot-3.webp" width="400" height="800" alt="A transcript in Japanese with the language detected automatically" loading="lazy">
+    <img src="img/shot-4.webp" width="400" height="800" alt="Recording screen with a timer, a live level meter, pause and stop" loading="lazy">
+    <img src="img/shot-5.webp" width="400" height="800" alt="Settings with transcription language, automatic transcription and storage used" loading="lazy">
+    <img src="img/shot-6.webp" width="400" height="800" alt="MemoLog Pro sheet listing transcription of any length, import, export and M4A" loading="lazy">
+  </div>
+
+  <h2>What it does</h2>
+  <ul class="features">
+    <li><strong>Records with one button.</strong> Pause and resume, a live level meter and a timer. It keeps going with the screen off, and Android shows a notification while it does.</li>
+    <li><strong>Saves as it goes.</strong> If the phone dies or the app is stopped, the recording is repaired the next time you open MemoLog, up to the last second saved.</li>
+    <li><strong>Transcribes on your phone.</strong> Sentences with timestamps, in the language it hears or the one you pick.</li>
+    <li><strong>Finds things again.</strong> Search across titles and transcripts. Tap a sentence to jump to it, and the text follows along as you listen at 0.5× to 2×.</li>
+    <li><strong>Shares when you ask.</strong> Share the audio as WAV. With Pro, export the transcript as text or SRT subtitles, share as M4A, or import an m4a, mp3, wav or aac file to transcribe it.</li>
+  </ul>
+
+  <h2>Where it helps</h2>
+  <ul>
+    <li><strong>Lectures and seminars.</strong> Stay with the talk, then search it later. <a href="guides/record-lectures-meetings.html">How to get a good recording</a>.</li>
+    <li><strong>Meetings and interviews.</strong> Useful when the conversation should not end up on someone else's server. <a href="guides/recording-consent.html">First, check whether you need consent</a>.</li>
+    <li><strong>Places without a signal.</strong> A plane, a basement lecture hall, a field trip. <a href="guides/transcribe-audio-offline-android.html">How offline transcription works</a>.</li>
+    <li><strong>Ideas and notes to self.</strong> Talk, stop, and search the text next month.</li>
+  </ul>
+
+  <h2>How good is the transcript, really?</h2>
+  <p>Good, and not perfect. Here is real output from MemoLog, on a recording of John F. Kennedy's 1962 speech at Rice University, with its echo and crowd. The highlighted lines are where it went wrong. Kennedy said "Why, 35 years ago, fly the Atlantic?" and "in this decade".</p>
+  <div class="transcript" aria-label="Part of a transcript made by MemoLog">
+    <div><time>0:48</time><span>And they may well ask why climb the highest mountain?</span></div>
+    <div><time>0:52</time><span><mark>Why 35 years ago?</mark></span></div>
+    <div><time>0:54</time><span><mark>Why the Atlantic?</mark></span></div>
+    <div><time>0:55</time><span>Why does rice play Texas?</span></div>
+    <div><time>0:58</time><span>We choose to go to the moon.</span></div>
+    <div><time>1:01</time><span>We choose to go to the moon.</span></div>
+    <div><time>1:09</time><span>We choose to go to the moon <mark>and this decay</mark> and do the other things, not because they are</span></div>
+  </div>
+  <p class="note">From the transcript shown in the second screenshot above.</p>
+  <p>You can follow the meaning, and you still need the audio to check details. That is why every sentence plays back with a tap.</p>
+  <dl class="facts">
+    <div><dt>Engine</dt><dd>whisper.cpp with OpenAI's Whisper <em>base</em> model. Base is the second smallest Whisper model, chosen so it fits on a phone. Larger models, like the ones big cloud services can run, tend to make fewer mistakes.</dd></div>
+    <div><dt>Model size</dt><dd>About 60 MB. It comes inside the app, so nothing more is downloaded. The first transcription copies it to the app's private storage, so expect about twice that on your phone.</dd></div>
+    <div><dt>Languages</dt><dd>99 by automatic detection, 28 to choose by hand in Settings. Quality varies by language, and common languages do best.</dd></div>
+    <div><dt>Speakers</dt><dd>No speaker labels. A meeting comes out as one run of text.</dd></div>
+    <div><dt>Speed and battery</dt><dd>It runs on your phone's processor. A long recording takes a while and uses battery.</dd></div>
+    <div><dt>Recording size</dt><dd>16 kHz mono WAV, about 1.9 MB a minute or 115 MB an hour. M4A export (Pro) is about 22 MB an hour.</dd></div>
+  </dl>
+
+  <div class="callout"><strong>Recording people may need their consent.</strong> The rules depend on where you are. <a href="guides/recording-consent.html">Read the plain version</a> before you record anyone else.</div>
 
   <h2 id="support">Support</h2>
   <div class="card">
     <p>Questions, bugs, or feature requests: email <a href="mailto:contact@eastframe-technology.com">contact@eastframe-technology.com</a>. A human reads every message, usually the same day.</p>
-    <p>A <a href="memolog-ios-demo.mp4">short captioned walkthrough</a> shows every feature.</p>
+    <p>A <a href="memolog-ios-demo.mp4">short captioned walkthrough</a> shows every feature. It was filmed on an iPhone; the Android app has the same screens. There is also a <a href="memolog-android-recording.mp4">short clip of recording on Android</a>.</p>
   </div>
 
   <h2>Frequently asked</h2>
-  <div class="card">
-    <p><strong>Is my audio sent anywhere to be transcribed?</strong> No. MemoLog transcribes with a speech model that is built into the app and runs on your phone. It works in airplane mode, and nothing leaves your device unless you share it.</p>
-    <p><strong>Which languages are supported?</strong> 99 languages. MemoLog detects the language by itself, or you can pick one in Settings for better results on short or mixed recordings.</p>
-    <p><strong>How accurate is it?</strong> Clear speech close to the phone transcribes very well; noisy rooms, distant voices and heavy accents make more mistakes. Tap any sentence to hear the audio behind it.</p>
-    <p><strong>What if the app is closed or the battery dies while recording?</strong> MemoLog writes the audio as it records. The next time you open it, an interrupted recording is repaired and listed, up to the last second that was saved.</p>
-    <p><strong>What does the free version include?</strong> Unlimited recording and playback, sharing audio, and the first 5 minutes of every transcript. MemoLog Pro, a single purchase, transcribes recordings of any length, imports audio files (for example from Voice Memos) to transcribe them, exports transcripts as text or subtitles (SRT), and shares audio as compact M4A.</p>
-    <p><strong>Is there a subscription?</strong> No. MemoLog Pro is a single purchase. Restore it on a new phone from Settings.</p>
-    <p><strong>How do I move my recordings to a computer?</strong> Share them from the recording screen, or on iPhone open the Files app (On My iPhone, MemoLog).</p>
+  <div class="card faq">
+    <h3>Is my audio sent anywhere to be transcribed?</h3>
+    <p>No. MemoLog transcribes with a speech model that is built into the app and runs on your phone. It works in airplane mode, and nothing leaves your device unless you share it.</p>
+    <h3>Do I have to download a language model?</h3>
+    <p>No. The model comes inside the app and covers every language. There is nothing more to download after you install from Google Play.</p>
+    <h3>Which languages are supported?</h3>
+    <p>The model recognises 99 languages. MemoLog can detect the language by itself, in any of them. For better results on short or mixed recordings you can set it by hand in Settings, which offers 28 of the most common ones.</p>
+    <h3>How accurate is it?</h3>
+    <p>Clear speech close to the phone transcribes well. Noisy rooms, distant voices, heavy accents, names and technical terms make more mistakes. It is not word-perfect, so tap any sentence to hear the audio behind it before you rely on it.</p>
+    <h3>Does it tell speakers apart?</h3>
+    <p>No. You get one run of text with timestamps, not a labelled conversation.</p>
+    <h3>How long does transcription take?</h3>
+    <p>It depends on your phone and the length of the recording, because your phone does all the work. A progress figure shows how far along it is. Long recordings are safest with the app open and the phone on a charger.</p>
+    <h3>What if the app is closed or the battery dies while recording?</h3>
+    <p>MemoLog writes the audio as it records. The next time you open it, an interrupted recording is repaired and listed, up to the last second that was saved.</p>
+    <h3>What does the free version include?</h3>
+    <p>Unlimited recording and playback, sharing audio as WAV, and the first 5 minutes of every transcript. MemoLog Pro, a single purchase, transcribes recordings of any length, imports audio files to transcribe them, exports transcripts as text or subtitles (SRT), and shares audio as compact M4A.</p>
+    <h3>Is there a subscription?</h3>
+    <p>No. MemoLog Pro is a single purchase. Restore it on a new phone from Settings.</p>
+    <h3>How do I move my recordings to a computer?</h3>
+    <p>Share them from the recording screen. Android lets you send the file to any app you have, such as email or a drive app.</p>
   </div>
 
   <h2 id="privacy">Privacy policy</h2>
@@ -58,7 +127,7 @@
     <p>Speech recognition by <a href="https://github.com/ggml-org/whisper.cpp">whisper.cpp</a> (MIT licence) with OpenAI's Whisper base model (MIT licence). Store pictures use public-domain recordings from LibriVox and a public-domain 1962 speech by John F. Kennedy.</p>
   </div>
 
-  <footer>© 2026 Eastframe Technology LLC</footer>
+  <footer>© 2026 Eastframe Technology LLC · <a href="privacy.html">Privacy policy</a> · <a href="#support">Support</a></footer>
 </main>
 </body>
 </html>

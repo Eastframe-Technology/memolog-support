@@ -1,0 +1,42 @@
+/* MemoLog: the icon's coral waveform and paper-white text lines, set like a page of notes. */
+:root { color-scheme: light dark; --bg:#f8f5f2; --fg:#16171d; --muted:#5e6068; --accent:#b23a26; --on-accent:#ffffff; --card:#ffffff; --line:#e6e0da; --mark:#fbe4df; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0e0f14; --fg:#efeeec; --muted:#a2a3ab; --accent:#ff7a6b; --on-accent:#1b0b08; --card:#191a23; --line:#2a2b36; --mark:#33201f; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:17.5px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; overflow-wrap:anywhere; }
+main { max-width:700px; margin:0 auto; padding:30px 16px 64px; }
+nav { display:flex; gap:18px; flex-wrap:wrap; align-items:center; font-size:15px; padding-bottom:12px; margin-bottom:38px; border-bottom:1px solid var(--line); }
+nav a { color:var(--muted); text-decoration:none; } nav a:hover { color:var(--fg); }
+nav a.home { color:var(--fg); font-weight:650; margin-right:auto; display:flex; align-items:center; gap:8px; }
+nav img { width:24px; height:24px; border-radius:6px; }
+h1, h2 { font-family:"New York", "Iowan Old Style", Georgia, "Times New Roman", serif; font-weight:600; }
+h1 { font-size:clamp(32px, 6.6vw, 46px); line-height:1.12; margin:0 0 14px; letter-spacing:-0.012em; }
+h2 { margin:50px 0 8px; font-size:26px; line-height:1.25; }
+h3 { font-size:17.5px; margin:22px 0 2px; }
+p.lead { font-size:20px; line-height:1.5; margin-top:0; color:var(--muted); }
+a { color:var(--accent); }
+.cta { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:var(--on-accent); text-decoration:none; font-weight:650; padding:13px 22px; border-radius:8px; margin:8px 0 4px; }
+.cta svg { width:20px; height:20px; }
+.note { color:var(--muted); font-size:14px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 20px; margin:16px 0; }
+.card > :first-child { margin-top:0; } .card > :last-child { margin-bottom:0; }
+.shots { display:flex; gap:12px; overflow-x:auto; padding:8px 16px 12px; margin:30px -16px 0; scroll-snap-type:x mandatory; }
+.shots img { width:190px; height:auto; border-radius:14px; flex:none; scroll-snap-align:start; background:#0e0f14; }
+.transcript { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:4px 10px 10px 4px; padding:10px 16px; margin:18px 0 6px; font-size:16.5px; }
+.transcript div { display:grid; grid-template-columns:3.1em 1fr; gap:8px; padding:3px 0; }
+.transcript time { color:var(--muted); font-variant-numeric:tabular-nums; font-size:14.5px; padding-top:1px; }
+.transcript mark { background:var(--mark); color:inherit; padding:0 2px; border-radius:3px; }
+dl.facts { margin:14px 0; border-top:1px solid var(--line); }
+dl.facts > div { display:grid; grid-template-columns:150px 1fr; gap:12px; padding:9px 0; border-bottom:1px solid var(--line); }
+dl.facts dt { font-weight:600; font-size:15.5px; } dl.facts dd { margin:0; }
+ul.features { list-style:none; padding:0; border-top:1px solid var(--line); } ul.features li { margin:0; padding:9px 0; border-bottom:1px solid var(--line); }
+ul, ol { padding-left:22px; } li { margin:5px 0; }
+table { border-collapse:collapse; width:100%; font-size:15.5px; margin:12px 0; } td, th { border-bottom:1px solid var(--line); padding:8px 6px; text-align:left; vertical-align:top; }
+th { font-size:13.5px; color:var(--muted); font-weight:600; }
+.callout { border-left:3px solid var(--accent); padding:2px 0 2px 14px; margin:18px 0; }
+footer { color:var(--muted); font-size:14px; margin-top:56px; border-top:1px solid var(--line); padding-top:16px; }
+.faq h3:first-child { margin-top:0; } .faq p { margin:0 0 6px; }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+@media (max-width:560px) {
+  nav { gap:14px; font-size:14px; } nav a.home { width:100%; margin-bottom:2px; }
+  dl.facts > div { grid-template-columns:1fr; gap:0; }
+}

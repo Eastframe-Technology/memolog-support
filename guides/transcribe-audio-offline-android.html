@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to transcribe audio offline on Android, and why on-device matters</title>
+<meta name="description" content="Speech to text that runs on your Android phone, with no connection and no upload. What you gain, what it costs in accuracy and storage, and how to get better results.">
+<link rel="canonical" href="https://eastframe-technology.github.io/memolog-support/guides/transcribe-audio-offline-android.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to transcribe audio offline on Android, and why on-device matters">
+<meta property="og:description" content="Speech to text that runs on your Android phone, with no connection and no upload. What you gain, what it costs in accuracy and storage, and how to get better results.">
+<meta property="og:image" content="https://eastframe-technology.github.io/memolog-support/img/og.jpg">
+<meta property="og:url" content="https://eastframe-technology.github.io/memolog-support/guides/transcribe-audio-offline-android.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to transcribe audio offline on Android, and why on-device matters","description":"Speech to text that runs on your Android phone, with no connection and no upload. What you gain, what it costs in accuracy and storage, and how to get better results.","datePublished":"2026-11-06","author":{"@type":"Organization","name":"Eastframe Technology LLC"},"publisher":{"@type":"Organization","name":"Eastframe Technology LLC"},"image":"https://eastframe-technology.github.io/memolog-support/img/og.jpg","mainEntityOfPage":"https://eastframe-technology.github.io/memolog-support/guides/transcribe-audio-offline-android.html"}
+</script>
+</head>
+<body>
+<main>
+  <nav><a class="home" href="../"><img src="../icon.png" alt="" width="24" height="24">MemoLog</a><a href="../guides/transcribe-audio-offline-android.html">Offline</a><a href="../guides/record-lectures-meetings.html">Lectures</a><a href="../guides/recording-consent.html">Consent</a><a href="../index.html#support">Support</a></nav>
+  <article>
+  <h1>How to transcribe audio offline on Android, and why on-device matters</h1>
+  <p class="lead">Modern speech models are small enough to run on a phone. You can turn a recording into text in airplane mode, and the audio never has to leave your hands. You pay for that in accuracy and battery, and it helps to know how much.</p>
+  <h2>Why on-device matters</h2>
+  <ul>
+    <li><strong>Your audio stays with you.</strong> A cloud service needs a copy of your recording to work on, and you have to trust how it handles and keeps that copy. With on-device transcription there is no copy. That matters for client calls, medical appointments, private meetings or a diary.</li>
+    <li><strong>It works anywhere.</strong> On a plane, in a basement lecture hall or abroad without data. Nothing is waiting on an upload.</li>
+    <li><strong>No meter is running.</strong> The work happens on your phone, so there is no cost per minute of audio to pass on to you.</li>
+  </ul>
+
+  <h2>What it costs you</h2>
+  <p>Be clear about the trade-offs, because they are real.</p>
+  <ul>
+    <li><strong>Accuracy.</strong> A phone has to run a much smaller model than a data center can. Expect more mistakes than from a large cloud model, especially on names, technical terms and poor audio.</li>
+    <li><strong>Time and battery.</strong> Your processor does the work. Long files take a while, and the phone gets warm.</li>
+    <li><strong>Storage.</strong> The model takes up space on your phone.</li>
+    <li><strong>Features.</strong> Extras such as telling speakers apart are often missing from small on-device setups.</li>
+  </ul>
+  <p>If you need a verbatim record for legal or medical use, a phone model on its own is not enough. Have a person check it against the audio.</p>
+
+  <h2>How MemoLog does it</h2>
+  <p>MemoLog runs <a href="https://github.com/ggml-org/whisper.cpp">whisper.cpp</a> with OpenAI's open Whisper base model. Base is the second smallest of the Whisper family, which runs from tiny through base, small and medium to large. Here is what that means in practice:</p>
+  <ul>
+    <li><strong>Size.</strong> The model file is about 60 MB, and it comes inside the app. There is no separate download and no language pack. The first time you transcribe, MemoLog copies the file into its private storage because the engine needs a regular file, so plan for about 120 MB for the model in total, plus your recordings.</li>
+    <li><strong>Languages.</strong> The model knows 99. It can detect which one it hears, or you can set one of 28 common languages in Settings.</li>
+    <li><strong>Long recordings.</strong> Audio is processed in 10-minute sections, each with the last words of the one before as context. You see the text appear as each section finishes, and you can cancel.</li>
+    <li><strong>Timestamps.</strong> Each sentence keeps its time, so you can tap it to hear the audio.</li>
+  </ul>
+  <p>To check for yourself that nothing goes online, turn on airplane mode, record something and watch it transcribe.</p>
+
+  <h2>What the accuracy looks like</h2>
+  <p>Here is a real example, from a recording of President Kennedy's 1962 speech at Rice University. It has an old recording's echo and a crowd, which makes it a fair test.</p>
+  <table>
+    <tr><th>What he said</th><th>What the model wrote</th></tr>
+    <tr><td>And they may well ask why climb the highest mountain?</td><td>And they may well ask why climb the highest mountain?</td></tr>
+    <tr><td>Why, 35 years ago, fly the Atlantic?</td><td>Why 35 years ago? Why the Atlantic?</td></tr>
+    <tr><td>Why does Rice play Texas?</td><td>Why does rice play Texas?</td></tr>
+    <tr><td>We choose to go to the moon in this decade and do the other things</td><td>We choose to go to the moon and this decay and do the other things</td></tr>
+  </table>
+  <p>That is typical. The gist is right, a sound-alike word slips in ("decay"), and a capitalized name loses its capital. A clear voice close to the microphone does better than this. A noisy room does worse.</p>
+  <p>One more thing to know. Whisper models can write words that were not said when they hear long silence, music or noise, or repeat a phrase. If a passage looks odd, listen to it.</p>
+
+  <h2>How to get better results</h2>
+  <ol>
+    <li><strong>Get the phone close.</strong> Distance hurts more than anything else. A voice at arm's length beats one across the room.</li>
+    <li><strong>Reduce noise.</strong> Fans, traffic and table thumps all cost words.</li>
+    <li><strong>Set the language when you know it.</strong> Automatic detection decides from the start of the audio, so a short clip, or a recording that starts with small talk in another language, can go wrong. Pick it in Settings if it is on the list.</li>
+    <li><strong>Check what matters.</strong> Names, numbers and dates are the likeliest to be wrong. Tap the sentence and listen.</li>
+  </ol>
+
+  <h2>Trying it</h2>
+  <p>Install MemoLog, tap record, talk for a minute and stop. It starts transcribing by itself, and you can turn that off in Settings. The free version transcribes the first 5 minutes of each recording, which is plenty to judge the quality on your own voice and phone. MemoLog Pro, a single purchase, covers any length and lets you import existing audio files through the Android file picker.</p>
+
+  <div class="card"><strong>MemoLog</strong> is a voice recorder for Android that transcribes on your phone, with no upload and no account. <a href="https://play.google.com/store/apps/details?id=com.eastframe.memolog">Get it on Google Play</a>.</div>
+  </article>
+  <footer>© 2026 Eastframe Technology LLC · <a href="../privacy.html">Privacy policy</a> · <a href="../#support">Support</a></footer>
+</main>
+</body>
+</html>
